@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5f77919d-70a8-4aed-aca2-1973ae7e2ccc" name="1und1" url="http://home630193938.1and1-data.host">
+        <fileTransfer host="home630193938.1and1-data.host" port="22" rootFolder="/TimeBuddy" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
