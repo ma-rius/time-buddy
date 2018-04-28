@@ -1,5 +1,7 @@
 body{
     background-color: #4674c1;
+    color: floralwhite;
+    font-family: "Helvetica";
 }
 
 img {
@@ -20,6 +22,9 @@ img {
 .dev{
     /*border: dashed red;*/
 }
+.dev-green{
+    /*border: dashed green;*/
+}
 
 .start-page{
     position: fixed;
@@ -27,9 +32,10 @@ img {
 }
 
 .start-page-title{
+    padding-top: 6vh;
     position: relative;
     top: 10%;
-    line-height: 200px;
+    /*line-height: 200px;*/
     font-family: 'Kalam', cursive;
     font-weight: 400;
     font-size: 6vw;
@@ -39,6 +45,7 @@ img {
 }
 
 .start-page-subtitle{
+    padding-top: 4vh;
     font-family: 'Kalam', cursive;
     font-weight: 300;
     font-size: 4vw;
@@ -46,8 +53,61 @@ img {
     vertical-align: middle;
     color: floralwhite;
 }
+
 .start-btn{
     margin-top: 50px;
     font-size: 30px;
     /*text-align: center;*/
+}
+
+.preference-page-title{
+    position: relative;
+    top: 10%;
+    /*line-height: 1px;*/
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+    font-size: 4vw;
+    text-align: center;
+    vertical-align: middle;
+    color: floralwhite;
+}
+
+.preference-page-subtitle{
+    padding-top: 6vh;
+    font-family: 'Kalam', cursive;
+    font-weight: 300;
+    font-size: 2vw;
+    text-align: center;
+    vertical-align: middle;
+    color: floralwhite;
+}
+.verkehrsmittel-header{
+    background-color: dimgray;
+    color: floralwhite;
+    text-align: center;
+    height: 10vh;
+    vertical-align: middle;
+    line-height: 10vh;
+    font-size: 5vh;
+}
+.verkehrsmittel-text{
+    padding-top: 75px;
+    position: relative;
+    font-family: 'Kalam', cursive;
+    font-weight: 300;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: middle;
+    color: floralwhite;
+}
+
+.verkehrsmittel-btn{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 30px;
+    width: 200px;
+    text-align: center;
+}
+.choose{
+padding-top: 10px;
 }
