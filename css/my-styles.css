@@ -124,3 +124,14 @@ padding-top: 10px;
 .fas .fa-plus .fa-lg{
     font-size: 20px;
 }
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.accept{
+    display:inherit;
+}
+.accept:visited{
+    display:none!important;
+}
