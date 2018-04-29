@@ -10,11 +10,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
+    <!--Bootstrap 3 for glyphicon in form-->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>-->
+
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700" rel="stylesheet">
 
     <!--Own Styles-->
     <link rel="stylesheet" href="css/my-styles.css">
+
+    <!--jQuery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!--Own JavaScript-->
+    <script src="js/dynamic-input.js"></script>
+
 </head>
 
 <body>
@@ -37,40 +48,41 @@
 
         </div>
         <div class="col-md-3 offset-md-1 dev">
-
+            <form>
+                <div class="form-group">
+                    <label for="office">Office</label>
+                    <input class="form-control" id="office" type="text" placeholder="Müller-Friedberg-Strasse 8">
+                </div>
+                <div class="form-group">
+                    <label for="home">Home</label>
+                    <input class="form-control" id="home" type="text" placeholder="Wiesenstrasse 9">
+                </div>
+                <div class="form-group">
+                    <label for="uni">Universität</label>
+                    <input class="form-control" id="uni" type="text" placeholder="Kaiserstraße 82">
+                </div>
+            </form>
+            <div class="control-group" id="fields">
+                <label class="control-label" for="field1">Weitere Adressen</label>
+                <div class="controls">
+                    <form role="form" autocomplete="off">
+                        <div class="entry input-group col-md-12">
+                            <input class="form-control" name="fields[]" type="text" placeholder="Brunnengasse 69" />
+                            <span class="input-group-btn">
+                            <button class="btn btn-success btn-add" type="button">
+                                <span class="glyphicon glyphicon-plus"></span>
+                            </button>
+                        </span>
+                        </div>
+                    </form>
+                    <br>
+                    <small>Klicke das <span class="glyphicon glyphicon-plus gs"></span> um weitere Adressen hinzuzufügen</small>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<script>
-    function myFunction() {
-        var publicTransport = document.getElementById("public-transport");
-        var car = document.getElementById("car");
-        var misc = document.getElementById("misc");
-
-        var p = false;
-        var c = false;
-        var m = false;
-
-        var next = document.getElementById("next");
-
-        if (publicTransport.checked === true) {
-            p = !p;
-        }
-        if (car.checked === true) {
-            c = !c;
-        }
-        if (misc.checked === true) {
-            m = !m;
-        }
-
-        if (p === true || c === true || m === true) {
-            next.style.display = "block";
-        } else {
-            next.style.display = "none";
-        }
-    }
-</script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

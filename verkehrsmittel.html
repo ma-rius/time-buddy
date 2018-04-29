@@ -30,8 +30,10 @@
     <div class="row dev-green">
         <div class="col-md-8 verkehrsmittel-text dev">
             Wähle dein präferiertes Verkehrsmittel, um von einem Meeting zum nächsten zu kommen.
-            Time Buddy wird Deine Reisewege entsprechend für Dich planen
+            Time Buddy wird Deine Reisewege entsprechend für Dich planen.<br>
             Für Auslandsreisen werden standardmässig auch Flugrouten geprüft.
+            <div class="text-center" id="next" style="display: none"><a href="arbeitszeiten.html"><button type="button" class="btn btn-outline-danger start-btn">Weiter</button></a></div>
+
         </div>
         <div class="col-md-3 offset-md-1 dev">
             <div class="row">
@@ -39,22 +41,64 @@
             </div>
             <div class="row">
                 <div class="text-center dev-green"><a href="preference-start.html">
-                    <button type="button" class="btn btn-outline-danger verkehrsmittel-btn">ÖV</button>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary verkehrsmittel-btn btn-outline-danger">
+                            <input type="checkbox" id="public-transport" checked autocomplete="off" onchange="myFunction()"> ÖV
+                        </label>
+                    </div>
                 </a></div>
             </div>
             <div class="row">
                 <div class="text-center"><a href="preference-start.html">
-                    <button type="button" class="btn btn-outline-danger verkehrsmittel-btn">Auto</button>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary verkehrsmittel-btn btn-outline-danger">
+                            <input type="checkbox" id="car" checked autocomplete="off" onchange="myFunction()"> Auto
+                        </label>
+                    </div>
                 </a></div>
             </div>
             <div class="row">
                 <div class="text-center"><a href="preference-start.html">
-                    <button type="button" class="btn btn-outline-danger verkehrsmittel-btn">Gemischt</button>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary verkehrsmittel-btn btn-outline-danger">
+                            <input type="checkbox" id="misc" checked autocomplete="off" onchange="myFunction()"> Gemischt
+                        </label>
+                    </div>
                 </a></div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function myFunction() {
+        var publicTransport = document.getElementById("public-transport");
+        var car = document.getElementById("car");
+        var misc = document.getElementById("misc");
+
+        var p = false;
+        var c = false;
+        var m = false;
+
+        var next = document.getElementById("next");
+
+        if (publicTransport.checked === true){
+            p = !p;
+        }
+        if (car.checked === true){
+            c = !c;
+        }
+        if (misc.checked === true){
+            m = !m;
+        }
+
+        if (p === true || c===true || m===true){
+            next.style.display = "block";
+        } else {
+            next.style.display = "none";
+        }
+    }
+</script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
