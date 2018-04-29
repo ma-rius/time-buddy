@@ -19,11 +19,14 @@ img {
     background-color: #4674c1;
 }
 
-.dev{
+.dev {
     /*border: dashed red;*/
 }
 .dev-green{
     /*border: dashed green;*/
+}
+.dev-yellow{
+    border: dashed yellow;
 }
 
 .start-page{
@@ -118,8 +121,6 @@ padding-top: 10px;
 {
     margin-top: 10px;
 }
-
-.glyphicon
-{
-    font-size: 12px;
+.fas .fa-plus .fa-lg{
+    font-size: 20px;
 }

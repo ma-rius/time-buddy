@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Time Buddy</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700" rel="stylesheet">
+
+    <!--Own Styles-->
+    <link rel="stylesheet" href="css/my-styles.css">
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 verkehrsmittel-header">Deine ToDo's</div>
+    </div>
+</div>
+<div class="container">
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+    <html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <script src="js/editablegrid.js"></script>
+        <script src="js/editablegrid_renderers.js"></script>
+        <script src="js/editablegrid_editors.js"></script>
+        <script src="js/editablegrid_validators.js"></script>
+        <script src="js/editablegrid_utils.js"></script>
+        <script src="js/editablegrid_charts.js"></script>
+        <link rel="stylesheet" href="css/editablegrid.css" type="text/css" media="screen">
+
+        <!--<style>-->
+        <!--body { font-family:'lucida grande', tahoma, verdana, arial, sans-serif; font-size:11px; }-->
+        <!--h1 { font-size: 15px; }-->
+        <!--a { color: #548dc4; text-decoration: none; }-->
+        <!--a:hover { text-decoration: underline; }-->
+        <!--table.testgrid { border-collapse: collapse; border: 1px solid #CCB; width: 800px; }-->
+        <!--table.testgrid td, table.testgrid th { padding: 5px; border: 1px solid #E0E0E0; }-->
+        <!--table.testgrid th { background: #E5E5E5; text-align: left; }-->
+        <!--input.invalid { background: red; color: #FDFDFD; }-->
+        <!--</style>-->
+
+        <script>
+            window.onload = function () {
+                editableGrid = new EditableGrid("DemoGridAttach", {});
+
+                // we build and load the metadata in Javascript
+                editableGrid.load({
+                    metadata: [
+                        {name: "name", datatype: "string", editable: true},
+                        {name: "height", datatype: "double(h,2)", editable: true},
+                        {name: "firstname", datatype: "string", editable: true},
+//                      {name: "age", datatype: "integer", editable: true},
+                        {name: "lastvisit", datatype: "date", editable: true},
+                        {name: "freelance", datatype: "boolean", editable: true},
+
+                        {
+                            name: "country", datatype: "string", editable: true, values: {
+                            "u": "Uni",
+                            'a': "Arbeit",
+                            'f': "Freelance"
+                        }
+                        }
+//                        {name: "email", datatype: "email", editable: true},
+
+                    ]
+                });
+
+                // then we attach to the HTML table and render it
+                editableGrid.attachToHTMLTable('htmlgrid');
+                editableGrid.renderGrid();
+            }
+        </script>
+
+    </head>
+
+    <body>
+    <table id="htmlgrid" class="table">
+        <tr>
+            <th>Aufgabe</th>
+            <th>Benötigte Zeit</th>
+            <th>Location</th>
+            <th>Deadline</th>
+            <th>Task teilbar?</th>
+            <th>Kategorie</th>
+
+        </tr>
+        <tr id="R1">
+            <td>Testing für Design Thinking durchführen</td>
+            <td>11</td>
+            <td>St. Gallen</td>
+            <td>11/12/2002</td>
+            <td>false</td>
+            <td>u</td>
+        </tr>
+        <tr id="R2">
+            <td>Reflection Paper fertigschreiben
+            </td>
+            <td>11</td>
+            <td>St. Gallen</td>
+            <td>11/12/2002</td>
+            <td>false</td>
+            <td>u</td>
+        </tr>
+        <tr id="R3">
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
+            <td>false</td>
+            <td>...</td>
+        </tr>
+
+
+    </table>
+    </body>
+
+    </html>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <!--Bootstrap 3 for glyphicon in form-->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>-->
+    <!--Font Awesome for icon in form-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
 
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700" rel="stylesheet">
@@ -41,13 +41,13 @@
     <div class="row dev-green">
         <div class="col-md-8 verkehrsmittel-text dev">
             Gib Time Buddy Deine wichtigsten Adressen an, damit er Dir jeweils die schnellsten Verbindungen berechnen
-            kann und Du jeweils nur ein Schlagwort im Location-Feld angeben musst
-            <div class="text-center" id="next" style="display: none"><a href="arbeitszeiten.html">
+            kann und Du jeweils nur ein Schlagwort im Location-Feld angeben musst<br>
+            <div class="text-center" id="next"><a href="timeblocks.html">
                 <button type="button" class="btn btn-outline-danger start-btn">Weiter</button>
             </a></div>
 
         </div>
-        <div class="col-md-3 offset-md-1 dev">
+        <div class="col-md-3 offset-md-1">
             <form>
                 <div class="form-group">
                     <label for="office">Office</label>
@@ -66,17 +66,17 @@
                 <label class="control-label" for="field1">Weitere Adressen</label>
                 <div class="controls">
                     <form role="form" autocomplete="off">
-                        <div class="entry input-group col-md-12">
+                        <div class="entry input-group col-md-14">
                             <input class="form-control" name="fields[]" type="text" placeholder="Brunnengasse 69" />
                             <span class="input-group-btn">
                             <button class="btn btn-success btn-add" type="button">
-                                <span class="glyphicon glyphicon-plus"></span>
+                                <i class="fas fa-plus fa-lg"></i>
                             </button>
                         </span>
                         </div>
                     </form>
                     <br>
-                    <small>Klicke das <span class="glyphicon glyphicon-plus gs"></span> um weitere Adressen hinzuzufügen</small>
+                    <small>Klicke das <i class="fas fa-plus"></i> um weitere Adressen hinzuzufügen</small>
                 </div>
             </div>
         </div>
