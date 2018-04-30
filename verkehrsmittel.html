@@ -43,7 +43,7 @@
                 <div class="text-center dev-green"><a href="preference-start.html">
                     <div class="btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary verkehrsmittel-btn btn-outline-danger">
-                            <input type="checkbox" id="public-transport" checked autocomplete="off" onchange="myFunction()"> ÖV
+                            <input type="checkbox" id="public-transport" autocomplete="off" onchange="myFunction()"> ÖV
                         </label>
                     </div>
                 </a></div>
@@ -52,7 +52,7 @@
                 <div class="text-center"><a href="preference-start.html">
                     <div class="btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary verkehrsmittel-btn btn-outline-danger">
-                            <input type="checkbox" id="car" checked autocomplete="off" onchange="myFunction()"> Auto
+                            <input type="checkbox" id="car" autocomplete="off" onchange="myFunction()"> Auto
                         </label>
                     </div>
                 </a></div>
@@ -61,7 +61,7 @@
                 <div class="text-center"><a href="preference-start.html">
                     <div class="btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary verkehrsmittel-btn btn-outline-danger">
-                            <input type="checkbox" id="misc" checked autocomplete="off" onchange="myFunction()"> Gemischt
+                            <input type="checkbox" id="misc" autocomplete="off" onchange="myFunction()"> Gemischt
                         </label>
                     </div>
                 </a></div>
@@ -84,16 +84,21 @@
 
         if (publicTransport.checked === true){
             p = !p;
+            console.log('p: ' + p);
         }
         if (car.checked === true){
             c = !c;
+            console.log('c: ' + c);
         }
         if (misc.checked === true){
             m = !m;
+            console.log('m: ' + m);
         }
-
         if (p === true || c===true || m===true){
             next.style.display = "block";
+            this.p = false;
+            this.c = false;
+            this.m = false;
         } else {
             next.style.display = "none";
         }
