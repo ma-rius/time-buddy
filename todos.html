@@ -15,7 +15,13 @@
 
     <!--Own Styles-->
     <link rel="stylesheet" href="css/my-styles.css">
-
+    <!--jQuery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--Own JavaScript-->
+    <script src="js/dynamic-input.js"></script>
+    <!--Font Awesome for icon in form-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+          integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
 
 <body>
@@ -80,7 +86,29 @@
                 // then we attach to the HTML table and render it
                 editableGrid.attachToHTMLTable('htmlgrid');
                 editableGrid.renderGrid();
-            }
+            };
+            $(function () {
+                $(document).on('click', '.btn-add', function (e) {
+                    e.preventDefault();
+                    var d = new Date();
+
+                    values = {
+                        country: "...",
+                        firstname: "...",
+                        freelance: false,
+                        height: "...",
+                        lastvisit: "...",
+                        name: "..."
+                    };
+
+                    editableGrid.addRow(d.getMilliseconds(), values, false);
+
+//                    console.log(editableGrid.getRowCount());
+//                    console.log(editableGrid.getRowValues(1));
+
+                })
+            });
+
         </script>
 
     </head>
@@ -140,7 +168,7 @@
             <td>false</td>
             <td>u</td>
         </tr>
-        <tr id="R6">
+ <!--       <tr id="R6">
             <td>...</td>
             <td>...</td>
             <td>...</td>
@@ -163,19 +191,19 @@
             <td>...</td>
             <td>false</td>
             <td>...</td>
-        </tr>
-        <tr id="R9">
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>false</td>
-            <td>...</td>
-        </tr>
+        </tr>-->
+
+        <span class="input-group-btn">
+            <button class="btn btn-success btn-add" type="button">
+                <i class="fas fa-plus fa-lg"></i>
+            </button>
+        </span>
 
 
     </table>
-    <div class="text-center"><a href="calendar1.html"><button type="button" class="btn btn-outline-danger start-btn">Kalendereinträge erstellen</button></a></div>
+    <div class="text-center"><a href="calendar1.html">
+        <button type="button" class="btn btn-outline-danger start-btn">Kalendereinträge erstellen</button>
+    </a></div>
 
     </body>
 
