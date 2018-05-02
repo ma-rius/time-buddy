@@ -3,6 +3,7 @@ $(function () {
     var dateSlider = document.getElementById('slider-date-mon');
 
     noUiSlider.create(dateSlider, {
+        step: 5000*60,
         range: {
             min: 1262300401000, // time in milliseconds
             max: 1262386799000 // If it's stupid but it works, it isn't stupid.
@@ -25,7 +26,10 @@ $(function () {
 
 // Create a string representation of the date.
     function formatDate(date) {
-        return date.getHours() + ":" + date.getMinutes();
+        if (date.getMinutes() < 10){
+            return date.getHours() + ":0" + date.getMinutes()
+        }
+        else return date.getHours() + ":" + date.getMinutes();
     }
 });
 
@@ -35,6 +39,7 @@ $(function () {
     var dateSlider = document.getElementById('slider-date-tue');
 
     noUiSlider.create(dateSlider, {
+        step: 5000*60,
         range: {
             min: 1262300401000, // time in milliseconds
             max: 1262386799000 // If it's stupid but it works, it isn't stupid.
@@ -57,7 +62,10 @@ $(function () {
 
 // Create a string representation of the date.
     function formatDate(date) {
-        return date.getHours() + ":" + date.getMinutes();
+        if (date.getMinutes() < 10){
+            return date.getHours() + ":0" + date.getMinutes()
+        }
+        else return date.getHours() + ":" + date.getMinutes();
     }
 });
 
@@ -66,6 +74,7 @@ $(function () {
     var dateSlider = document.getElementById('slider-date-wed');
 
     noUiSlider.create(dateSlider, {
+        step: 5000*60,
         range: {
             min: 1262300401000, // time in milliseconds
             max: 1262386799000 // If it's stupid but it works, it isn't stupid.
@@ -85,10 +94,12 @@ $(function () {
         dateValues[handle].innerHTML = formatDate(new Date(+values[handle]));
     });
 
-
 // Create a string representation of the date.
     function formatDate(date) {
-        return date.getHours() + ":" + date.getMinutes();
+        if (date.getMinutes() < 10){
+            return date.getHours() + ":0" + date.getMinutes()
+        }
+        else return date.getHours() + ":" + date.getMinutes();
     }
 });
 
@@ -97,6 +108,7 @@ $(function () {
     var dateSlider = document.getElementById('slider-date-thu');
 
     noUiSlider.create(dateSlider, {
+        step: 5000*60,
         range: {
             min: 1262300401000, // time in milliseconds
             max: 1262386799000 // If it's stupid but it works, it isn't stupid.
@@ -119,7 +131,10 @@ $(function () {
 
 // Create a string representation of the date.
     function formatDate(date) {
-        return date.getHours() + ":" + date.getMinutes();
+        if (date.getMinutes() < 10){
+            return date.getHours() + ":0" + date.getMinutes()
+        }
+        else return date.getHours() + ":" + date.getMinutes();
     }
 });
 
@@ -128,6 +143,7 @@ $(function () {
     var dateSlider = document.getElementById('slider-date-fri');
 
     noUiSlider.create(dateSlider, {
+        step: 5000*60,
         range: {
             min: 1262300401000, // time in milliseconds
             max: 1262386799000 // If it's stupid but it works, it isn't stupid.
@@ -150,6 +166,9 @@ $(function () {
 
 // Create a string representation of the date.
     function formatDate(date) {
-        return date.getHours() + ":" + date.getMinutes();
+        if (date.getMinutes() < 10){
+            return date.getHours() + ":0" + date.getMinutes()
+        }
+        else return date.getHours() + ":" + date.getMinutes();
     }
 });

@@ -29,13 +29,14 @@
     <!--<script src="js/jquery.min.js"></script>-->
     <!--Own JavaScript-->
     <script src="js/timeblocks.js"></script>
+    <script src="js/dynamic-input.js"></script>
+
 </head>
 
 <body>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12 page-header">Reservierte Zeitblöcke
-        </div>
+    <div class="row page-header">
+        <div class="col-md-12 ">Reservierte Zeitblöcke</div>
     </div>
 </div>
 <div class="container">
@@ -44,8 +45,9 @@
     </div>
     <div class="row">
         <div class="col-md-8 verkehrsmittel-text">
-            Wichtige Dinge, wie Sport und dezidierte Arbeitszeit fallen im stressigen Alltag oft unter den Tisch. Time
-            Buddy stellt sicher, dass Du Dir Zeit für die wichtigen Dinge im Leben nimmst.
+            Für welche Aktivitäten möchtest Du Dir Zeit reservieren? Sport, Meditation, und dedizierte Arbeitszeit
+            fallen im stressigen Alltag oft unter den Tisch. Time Buddy hilft Dir dabei, für wichtige Dinge Zeit zu
+            nehmen
             <div class="text-center"><a href="todos.html">
                 <button type="button" class="btn btn-outline-danger start-btn">Weiter</button>
             </a></div>
@@ -93,33 +95,64 @@
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
                 <label class="form-check-label" for="inlineCheckbox2">Unterteilbar</label>
             </div>
-            <div class="input-group">
-                <!--<div class="col-md-8">-->
-                <input type="text" class="form-control" placeholder="Sportschau">
-                <!--<div class="col-md-4">-->
-                <input type="text" class="form-control" placeholder="2 h">
-            </div>
-            <div class="form-check form-check-inline preserved-timeblock">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Flexibel</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Unterteilbar</label>
-            </div>
-            <div class="input-group">
-                <!--<div class="col-md-8">-->
-                <input type="text" class="form-control" placeholder="...">
-                <!--<div class="col-md-4">-->
-                <input type="text" class="form-control" placeholder="...">
-            </div>
-            <div class="form-check form-check-inline preserved-timeblock">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">Flexibel</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">Unterteilbar</label>
+            <!--        <div class="input-group">
+                        &lt;!&ndash;<div class="col-md-8">&ndash;&gt;
+                        <input type="text" class="form-control" placeholder="Sportschau">
+                        &lt;!&ndash;<div class="col-md-4">&ndash;&gt;
+                        <input type="text" class="form-control" placeholder="2 h">
+                    </div>
+                    <div class="form-check form-check-inline preserved-timeblock">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Flexibel</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Unterteilbar</label>
+                    </div>
+                    <div class="input-group">
+                        &lt;!&ndash;<div class="col-md-8">&ndash;&gt;
+                        <input type="text" class="form-control" placeholder="...">
+                        &lt;!&ndash;<div class="col-md-4">&ndash;&gt;
+                        <input type="text" class="form-control" placeholder="...">
+                    </div>
+                    <div class="controls">
+                    <div class="form-check form-check-inline preserved-timeblock">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                        <label class="form-check-label" for="inlineCheckbox1">Flexibel</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                        <label class="form-check-label" for="inlineCheckbox2">Unterteilbar</label>
+                    </div>-->
+            <div class="controls">
+                <form role="form" autocomplete="off">
+                    <div class="entry input-group col-md-14">
+                        <div class="input-group">
+                            <!--<div class="col-md-8">-->
+                            <input type="text" class="form-control" placeholder="Sportschau">
+                            <!--<div class="col-md-4">-->
+                            <input type="text" class="form-control" placeholder="...">
+                        </div>
+                        <div class="controls">
+                            <div class="form-check form-check-inline preserved-timeblock">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Flexibel</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Unterteilbar</label>
+                            </div>
+                            <!--<input class="form-control" name="fields[]" type="text" placeholder="Brunnengasse 69"/>-->
+                            <span class="input-group-btn">
+                            <button class="btn btn-success btn-add" type="button">
+                                <i class="fas fa-plus fa-lg"></i>
+                            </button>
+                        </span>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <small>Klicke das <i class="fas fa-plus"></i> um weitere Aktivitäten hinzuzufügen</small>
             </div>
         </div>
     </div>

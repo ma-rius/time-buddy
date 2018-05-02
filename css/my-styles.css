@@ -1,5 +1,6 @@
 html {
     min-height: 100%;
+    padding-bottom: 20px;
 }
 
 body {
@@ -27,6 +28,22 @@ img {
 
 .button-color {
     background-color: #4674c1;
+}
+.btn-add {
+    background-color: #3FB8AF;
+    border-color: #3FB8AF ;
+}
+button.btn.btn-add.btn-success:hover{
+    background-color: #359a92;
+    border-color: #359a92;
+}
+.btn-remove{
+    background-color: #fd533c;
+    border-color: #fd533c;
+}
+button.btn.btn-remove.btn-danger:hover{
+    background-color: #cc221f;
+    border-color: #cc221f;
 }
 
 .dev {

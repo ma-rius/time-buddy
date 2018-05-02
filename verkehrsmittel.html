@@ -19,8 +19,8 @@
 
 <body>
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12 page-header">Verkehrsmittel</div>
+    <div class="row page-header">
+        <div class="col-md-12 ">Verkehrsmittel</div>
     </div>
 </div>
 <div class="container">
@@ -29,16 +29,16 @@
     </div>
     <div class="row dev-green">
         <div class="col-md-8 verkehrsmittel-text dev">
-            Wähle dein präferiertes Verkehrsmittel, um von einem Meeting zum nächsten zu kommen.
-            Time Buddy wird Deine Reisewege entsprechend für Dich planen.<br>
-            Für Auslandsreisen werden standardmässig auch Flugrouten geprüft.
-            <div class="text-center" id="next" style="display: none"><a href="arbeitszeiten.html"><button type="button" class="btn btn-outline-danger start-btn">Weiter</button></a></div>
+            Welche(s) Verkehrsmittel nutzt Du, um von einem Meeting zum nächsten zu kommen?
+            <div class="text-center" id="next" style="display: none"><a href="arbeitszeiten.html">
+                <button type="button" class="btn btn-outline-danger start-btn">Weiter</button>
+            </a></div>
 
         </div>
         <div class="col-md-3 offset-md-1 dev">
-            <div class="row">
-                <div class="choose">Bitte wählen...</div>
-            </div>
+            <!--<div class="row">-->
+                <!--<div class="choose">Bitte wählen...</div>-->
+            <!--</div>-->
             <div class="row">
                 <div class="text-center dev-green"><a href="preference-start.html">
                     <div class="btn-group-toggle" data-toggle="buttons">
@@ -61,7 +61,16 @@
                 <div class="text-center"><a href="preference-start.html">
                     <div class="btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary verkehrsmittel-btn btn-outline-danger">
-                            <input type="checkbox" id="misc" autocomplete="off" onchange="myFunction()"> Gemischt
+                            <input type="checkbox" id="misc" autocomplete="off" onchange="myFunction()"> Fahrrad
+                        </label>
+                    </div>
+                </a></div>
+            </div>
+            <div class="row">
+                <div class="text-center"><a href="preference-start.html">
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary verkehrsmittel-btn btn-outline-danger">
+                            <input type="checkbox" id="foot" autocomplete="off" onchange="myFunction()"> Zu Fuss
                         </label>
                     </div>
                 </a></div>
@@ -75,30 +84,37 @@
         var publicTransport = document.getElementById("public-transport");
         var car = document.getElementById("car");
         var misc = document.getElementById("misc");
+        var foot = document.getElementById("foot");
 
         var p = false;
         var c = false;
         var m = false;
+        var f = false;
 
         var next = document.getElementById("next");
 
-        if (publicTransport.checked === true){
+        if (publicTransport.checked === true) {
             p = !p;
             console.log('p: ' + p);
         }
-        if (car.checked === true){
+        if (car.checked === true) {
             c = !c;
             console.log('c: ' + c);
         }
-        if (misc.checked === true){
+        if (misc.checked === true) {
             m = !m;
             console.log('m: ' + m);
         }
-        if (p === true || c===true || m===true){
+        if (foot.checked === true) {
+            f = !f;
+            console.log('f: ' + m);
+        }
+        if (p === true || c === true || m === true || f === true) {
             next.style.display = "block";
             this.p = false;
             this.c = false;
             this.m = false;
+            this.f = false;
         } else {
             next.style.display = "none";
         }
