@@ -106,9 +106,19 @@ img {
 }
 
 .preference-page-title {
-    position: relative;
+/*    position: relative;
     top: 10%;
-    /*line-height: 1px;*/
+    !*line-height: 1px;*!
+    font-family: 'Kalam', cursive;
+    font-weight: 400;
+    font-size: 4vw;
+    text-align: center;
+    vertical-align: middle;
+    color: floralwhite;*/
+    padding-top: 5vh;
+    position: relative;
+    /*top: 10%;*/
+    /*line-height: 200px;*/
     font-family: 'Kalam', cursive;
     font-weight: 400;
     font-size: 4vw;
@@ -118,7 +128,15 @@ img {
 }
 
 .preference-page-subtitle {
-    padding-top: 6vh;
+/*    padding-top: 6vh;
+    font-family: 'Kalam', cursive;
+    font-weight: 300;
+    font-size: 2vw;
+    text-align: center;
+    vertical-align: middle;
+    color: floralwhite;*/
+    /*margin-top: -3vh;*/
+    margin-bottom: 4%;
     font-family: 'Kalam', cursive;
     font-weight: 300;
     font-size: 2vw;
@@ -232,4 +250,22 @@ img {
     .preference-page-subtitle{
         font-size: 5vw;
     }
+
+    .preference-page-title {
+
+        font-size: 7vw;
+        text-align: center;
+        vertical-align: middle;
+        color: floralwhite;
+    }
+
+    .preference-page-subtitle {
+        margin-bottom: 4%;
+        font-weight: 300;
+        font-size: 5vw;
+        text-align: center;
+        vertical-align: middle;
+        color: floralwhite;
+    }
+
 }
