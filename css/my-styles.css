@@ -334,5 +334,8 @@ button.btn.btn-voice.btn-success:hover{
         display: flex;
         justify-content: center;
     }
+    .start-btn{
+        font-size: 15px;
+    }
 
 }
