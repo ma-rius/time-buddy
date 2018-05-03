@@ -22,98 +22,76 @@
     <!--Font Awesome for icon in form-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
           integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-</head>
+    <script src="js/editablegrid.js"></script>
+    <script src="js/editablegrid_renderers.js"></script>
+    <script src="js/editablegrid_editors.js"></script>
+    <script src="js/editablegrid_validators.js"></script>
+    <script src="js/editablegrid_utils.js"></script>
+    <script src="js/editablegrid_charts.js"></script>
+    <link rel="stylesheet" href="css/editablegrid.css" type="text/css" media="screen">
 
-<body>
-<div class="container-fluid">
-    <div class="row page-header">
-        <div class="col-md-12 ">Deine ToDo's</div>
-    </div>
-</div>
-<div class="container">
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<script>
+    window.onload = function () {
+        editableGrid = new EditableGrid("DemoGridAttach", {});
 
-    <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-        <script src="js/editablegrid.js"></script>
-        <script src="js/editablegrid_renderers.js"></script>
-        <script src="js/editablegrid_editors.js"></script>
-        <script src="js/editablegrid_validators.js"></script>
-        <script src="js/editablegrid_utils.js"></script>
-        <script src="js/editablegrid_charts.js"></script>
-        <link rel="stylesheet" href="css/editablegrid.css" type="text/css" media="screen">
-
-        <!--<style>-->
-        <!--body { font-family:'lucida grande', tahoma, verdana, arial, sans-serif; font-size:11px; }-->
-        <!--h1 { font-size: 15px; }-->
-        <!--a { color: #548dc4; text-decoration: none; }-->
-        <!--a:hover { text-decoration: underline; }-->
-        <!--table.testgrid { border-collapse: collapse; border: 1px solid #CCB; width: 800px; }-->
-        <!--table.testgrid td, table.testgrid th { padding: 5px; border: 1px solid #E0E0E0; }-->
-        <!--table.testgrid th { background: #E5E5E5; text-align: left; }-->
-        <!--input.invalid { background: red; color: #FDFDFD; }-->
-        <!--</style>-->
-
-        <script>
-            window.onload = function () {
-                editableGrid = new EditableGrid("DemoGridAttach", {});
-
-                // we build and load the metadata in Javascript
-                editableGrid.load({
-                    metadata: [
-                        {name: "name", datatype: "string", editable: true},
-                        {name: "height", datatype: "double(h,2)", editable: true},
-                        {name: "firstname", datatype: "string", editable: true},
+        // we build and load the metadata in Javascript
+        editableGrid.load({
+            metadata: [
+                {name: "name", datatype: "string", editable: true},
+                {name: "height", datatype: "double(h,2)", editable: true},
+                {name: "firstname", datatype: "string", editable: true},
 //                      {name: "age", datatype: "integer", editable: true},
-                        {name: "lastvisit", datatype: "date", editable: true},
-                        {name: "freelance", datatype: "boolean", editable: true},
+                {name: "lastvisit", datatype: "date", editable: true},
+                {name: "freelance", datatype: "boolean", editable: true},
 
-                        {
-                            name: "country", datatype: "string", editable: true, values: {
-                            "u": "Uni",
-                            'a': "Arbeit",
-                            'f': "Freelance",
-                            'p': "Privat"
-                        }
-                        }
+                {
+                    name: "country", datatype: "string", editable: true, values: {
+                    "u": "Uni",
+                    'a': "Arbeit",
+                    'f': "Freelance",
+                    'p': "Privat"
+                }
+                }
 //                        {name: "email", datatype: "email", editable: true},
 
-                    ]
-                });
+            ]
+        });
 
-                // then we attach to the HTML table and render it
-                editableGrid.attachToHTMLTable('htmlgrid');
-                editableGrid.renderGrid();
+        // then we attach to the HTML table and render it
+        editableGrid.attachToHTMLTable('htmlgrid');
+        editableGrid.renderGrid();
+    };
+    $(function () {
+        $(document).on('click', '.btn-add', function (e) {
+            e.preventDefault();
+            var d = new Date();
+
+            values = {
+                country: "...",
+                firstname: "...",
+                freelance: false,
+                height: "...",
+                lastvisit: "...",
+                name: "..."
             };
-            $(function () {
-                $(document).on('click', '.btn-add', function (e) {
-                    e.preventDefault();
-                    var d = new Date();
 
-                    values = {
-                        country: "...",
-                        firstname: "...",
-                        freelance: false,
-                        height: "...",
-                        lastvisit: "...",
-                        name: "..."
-                    };
-
-                    editableGrid.addRow(d.getMilliseconds(), values, false);
+            editableGrid.addRow(d.getMilliseconds(), values, false);
 
 //                    console.log(editableGrid.getRowCount());
 //                    console.log(editableGrid.getRowValues(1));
 
-                })
-            });
+        })
+    });
 
-        </script>
-
-    </head>
-
-    <body>
+</script></head>
+<body>
+<div class="container-fluid">
+    <div class="row page-header">
+        <div class="col-md-12 col-xs-12">Erfasse deine ToDo's</div>
+    </div>
+</div>
+<div class="container">
+    <div class="container-todos">
     <table id="htmlgrid" class="table">
         <tr>
             <th>Aufgabe</th>
@@ -168,47 +146,48 @@
             <td>false</td>
             <td>u</td>
         </tr>
- <!--       <tr id="R6">
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>false</td>
-            <td>...</td>
-        </tr>
-        <tr id="R7">
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>false</td>
-            <td>...</td>
-        </tr>
-        <tr id="R8">
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>...</td>
-            <td>false</td>
-            <td>...</td>
-        </tr>-->
+        <!--       <tr id="R6">
+                   <td>...</td>
+                   <td>...</td>
+                   <td>...</td>
+                   <td>...</td>
+                   <td>false</td>
+                   <td>...</td>
+               </tr>
+               <tr id="R7">
+                   <td>...</td>
+                   <td>...</td>
+                   <td>...</td>
+                   <td>...</td>
+                   <td>false</td>
+                   <td>...</td>
+               </tr>
+               <tr id="R8">
+                   <td>...</td>
+                   <td>...</td>
+                   <td>...</td>
+                   <td>...</td>
+                   <td>false</td>
+                   <td>...</td>
+               </tr>-->
 
         <span class="input-group-btn">
             <button class="btn btn-success btn-add" type="button">
                 <i class="fas fa-plus fa-lg"></i>
             </button>
         </span>
-
+        <span class="input-group-btn" style="margin-left: 20px">
+            <button class="btn btn-success btn-voice" type="button">
+                <i class="fas fa-microphone fa-lg"></i>
+            </button>
+        </span>
 
     </table>
     <div class="text-center"><a href="calendar1.html">
         <button type="button" class="btn btn-outline-danger start-btn">Kalendereinträge erstellen</button>
     </a></div>
 
-    </body>
-
-    </html>
-
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
