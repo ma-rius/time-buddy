@@ -12,7 +12,7 @@ body {
 
     height: 100%;
     color: floralwhite;
-    font-family: "Helvetica";
+    font-family: 'Kalam', cursive;
 }
 
 img {
@@ -128,7 +128,9 @@ button.btn.btn-voice.btn-success:hover{
     vertical-align: middle;
     color: floralwhite;
 }
-
+.btn-outline-danger.focus, .btn-outline-danger:focus{
+    box-shadow: none;
+}
 .start-btn {
     margin-top: 50px;
     font-size: 30px;
@@ -211,10 +213,16 @@ button.btn.btn-voice.btn-success:hover{
     font-size: 30px;
     width: 200px;
     text-align: center;
+    border-color: floralwhite;
+    color: floralwhite;
+}
+.verkehrsmittel-btn.active{
+    background-color: #3FB8AF!important;
+    border-color: floralwhite!important;
 }
 
 .verkehrsmittel-btn:hover {
-    /*background-color: red!important;*/
+    border-color: floralwhite!important;
 }
 
 .choose {
@@ -262,7 +270,9 @@ button.btn.btn-voice.btn-success:hover{
     border-color: #3FB8AF;
 
 }
-
+.empty{
+    height:100px;
+}
 /* Small devices */
 @media (max-width: 768px) {
     .container-todos{
@@ -303,6 +313,26 @@ button.btn.btn-voice.btn-success:hover{
         text-align: center;
         vertical-align: middle;
         color: floralwhite;
+    }
+    .page-header {
+        /*background-color: dimgray;*/
+        /*background: #ECE9E6;  !* fallback for old browsers *!*/
+        /*background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  !* Chrome 10-25, Safari 5.1-6 *!*/
+        /*background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+        /*color:#BBBBBB;*/
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+    .empty{
+        height: 0;
+        margin-top: -30px;
+    }
+
+    .mobile-center{
+        display: flex;
+        justify-content: center;
     }
 
 }

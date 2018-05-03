@@ -49,62 +49,79 @@ $(document).ready(function () {
         events: [
             {
                 title: 'All Day Event',
-                start: '2018-03-01'
+                start: '2018-03-01',
+                color: '#378006'
             },
             {
                 title: 'Long Event',
                 start: '2018-03-07',
-                end: '2018-03-10'
+                end: '2018-03-10',
+                color: '#378006'
+
             },
             {
-                id: 999,
                 title: 'Repeating Event',
-                start: '2018-03-09T16:00:00'
+                start: '2018-03-09T16:00:00',
+                color: '#378006'
             },
             {
-                id: 999,
-                title: 'Repeating Event',
-                start: '2018-03-16T16:00:00'
+
+                title: 'Tennis',
+                start: '2018-03-16T16:00:00',
+                color: '#f47a36'
+
             },
             {
                 title: 'Conference',
                 start: '2018-03-11',
-                end: '2018-03-13'
+                end: '2018-03-13',
+                color: '#225180'
+
             },
             {
                 title: 'Meeting',
-                start: '2018-03-12T10:30:00',
-                end: '2018-03-12T12:30:00'
+                start: '2018-03-12T09:30:00',
+                // end: '2018-03-12T11:30:00',
+                color: '#b40913'
+
             },
             {
                 title: 'Lunch',
-                start: '2018-03-13T12:00:00'
+                start: '2018-03-13T12:00:00',
+                color: '#f47a36'
+
             },
             {
                 title: 'Meditation',
-                start: '2018-03-14T15:00:00'
+                start: '2018-03-16T08:00:00',
+                color: '#b40913'
+
             },
             {
                 title: 'Meeting',
-                start: '2018-03-12T14:30:00'
+                start: '2018-03-14T12:30:00',
+                color: '#b40913'
+
             },
             {
                 title: 'Happy Hour',
-                start: '2018-03-12T17:30:00'
+                start: '2018-03-12T17:30:00',
+                color: '#378006'
+                // url: 'http://google.com/',
+
             },
             {
                 title: 'Dinner',
-                start: '2018-03-12T20:00:00'
+                start: '2018-03-12T20:00:00',
+                color: '#378006'
+
             },
             {
                 title: 'Breakfast',
-                start: '2018-03-13T07:00:00'
-            },
-            {
-                title: 'Click for Google',
-                url: 'http://google.com/',
-                start: '2018-03-28'
+                start: '2018-03-13T07:00:00',
+                color: '#378006'
             }
+
         ]
     });
 
@@ -156,63 +173,79 @@ $(document).ready(function () {
         events: [
             {
                 title: 'All Day Event',
-                start: '2018-03-01'
+                start: '2018-03-01',
+                color: '#378006'
             },
             {
                 title: 'Long Event',
                 start: '2018-03-07',
-                end: '2018-03-10'
+                end: '2018-03-10',
+                color: '#378006'
+
             },
             {
-                id: 999,
                 title: 'Repeating Event',
-                start: '2018-03-09T16:00:00'
+                start: '2018-03-09T16:00:00',
+                color: '#378006'
             },
             {
-                id: 999,
-                title: 'Repeating Event',
-                start: '2018-03-16T16:00:00'
+
+                title: 'Tennis',
+                start: '2018-03-16T16:00:00',
+                color: '#f47a36'
+
             },
             {
                 title: 'Conference',
                 start: '2018-03-11',
-                end: '2018-03-13'
+                end: '2018-03-13',
+                color: '#225180'
+
             },
             {
                 title: 'Meeting',
                 start: '2018-03-13T09:30:00',
-                end: '2018-03-13T11:30:00'
+                // end: '2018-03-13T11:30:00',
+                color: '#b40913'
+
             },
             {
                 title: 'Lunch',
-                start: '2018-03-13T12:00:00'
+                start: '2018-03-13T12:00:00',
+                color: '#f47a36'
+
             },
             {
                 title: 'Meditation',
-                start: '2018-03-14T15:00:00'
+                start: '2018-03-14T15:00:00',
+                color: '#b40913'
+
             },
             {
                 title: 'Meeting',
-                start: '2018-03-14T09:30:00'
+                start: '2018-03-14T09:30:00',
+                color: '#b40913'
+
             },
             {
                 title: 'Happy Hour',
-                start: '2018-03-12T17:30:00'
+                start: '2018-03-12T17:30:00',
+                color: '#378006'
+                // url: 'http://google.com/',
+
             },
             {
                 title: 'Dinner',
-                start: '2018-03-12T20:00:00'
+                start: '2018-03-12T20:00:00',
+                color: '#378006'
+
             },
             {
                 title: 'Breakfast',
-                start: '2018-03-13T07:00:00'
-            },
-            {
-                title: 'Click for Google',
-                url: 'http://google.com/',
-                start: '2018-03-13T016:00:00',
-                end: '2018-03-13T017:00:00'
+                start: '2018-03-13T07:00:00',
+                color: '#378006'
             }
+
         ]
     });
 
