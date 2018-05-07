@@ -9,11 +9,12 @@ $(document).ready(function () {
             center: 'title',
             right: ''
         },
-        defaultDate: '2018-03-12',
+        defaultDate: '2018-04-12',
         navLinks: true, // can click day/week names to navigate views
         selectable: true,
         selectHelper: true,
         defaultView: 'agendaWeek',
+        hiddenDays: [0, 6],
         select: function (start, end) {
             var title = prompt('Event Title:');
             var eventData;
@@ -138,6 +139,7 @@ $(document).ready(function () {
         selectable: true,
         selectHelper: true,
         defaultView: 'agendaWeek',
+        hiddenDays: [0, 6],
         select: function (start, end) {
             var title = prompt('Event Title:');
             var eventData;
